@@ -17,11 +17,11 @@ support = "https://t.me/Mega_Bots_Updates"
 @Client.on_message(Filters.command(["start"]))
 async def start(c, m):
 
-    await c.send_message(chat_id=m.chat.id,
-                         text=Translation.START.format(m.from_user.first_name, Config.USER_NAME),
-                         reply_to_message_id=m.message_id,
-                         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("𝗠𝘆 𝗙𝗮𝘁𝗵𝗲𝗿 👨‍💻", url=my_father), InlineKeyboardButton("📌𝗨𝗽𝗱𝗮𝘁𝗶𝗼𝗶𝗻 𝗖𝗵𝗮𝗻𝗻𝗲𝗹", url=support)]]))
-    logger.info(f"{m.from_user.first_name} used start command")
+    msg := b.NewSendableMessage(u.EffectiveChat.Id, fmt.Sprintf("Hi [%s](tg://user?id=%v)\n 𝗜 𝗮𝗺 𝗮 𝗦𝗶𝗺𝗽𝗹𝗲 𝗖𝗼𝗻𝘃𝗲𝗿𝘁 𝗕𝗼𝘁 𝗪𝗶𝘁𝗵 𝗧𝗵𝘂𝗺𝗯𝗻𝗮𝗶𝗹 🔰 
+
+𝗙𝗼𝗿 𝗠𝗼𝗿𝗲 𝗗𝗲𝘁𝗮𝗶𝗹𝘀 /help
+
+𝗕𝗼𝘁 𝗠𝗮𝗱𝗲 𝗕𝘆 : @Mega_Bots_Updates} used start command")
 
 
 
